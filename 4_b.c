@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
 
-// write menu driven program to convert infix notation to prefix notation using stack
-
 char stack[100];
 int top = -1;
 
@@ -18,6 +16,7 @@ char pop()
     else
         return stack[top--];
 }
+
 int priority(char x)
 {
     if (x == '(')
@@ -32,12 +31,10 @@ int main()
 {
     char exp[100];
     char *e, x;
-
     printf("\nEnter the Expression : ");
     scanf("%s", exp);
     printf("\n");
     e = exp;
-
     while (*e != '\0')
     {
         if (isalnum(*e))

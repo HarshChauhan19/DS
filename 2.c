@@ -1,47 +1,65 @@
 #include <stdio.h>
-#include <stdbool.h>
+#include <stdlib.h>
 
-#define MAX_SIZE 100 // Maximum size of the stack
+int main()
+{
+    int *list = NULL;
+    int size = 0;
+    int choice;
 
-int stack[MAX_SIZE]; // Stack array
-int top = -1; // Top of the stack, initialized to -1 when empty
+    while (1)
+    {
+        printf("\nMenu:\n");
+        printf("1. Add an element\n");
+        printf("2. Delete last element\n");
+        printf("3. Display the list elements\n");
+        printf("4. Reset\n");
+        printf("5. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
 
-// Function to push an element onto the stack
-void push(int element) {
-    if (top == MAX_SIZE - 1) {
-        printf("Stack Overflow: Cannot push element onto a full stack.\n");
-    } else {
-        stack[++top] = element; // Increment top and add the element
+        switch (choice)
+        {
+        case 1:
+            size++;
+            list = (int *)realloc(list, size * sizeof(int));
+            printf("Enter the element : ");
+            scanf("%d", &list[size - 1]);
+            break;
+        case 2:
+            if (size > 0)
+            {
+                size--;
+                list = (int *)realloc(list, size * sizeof(int));
+                printf("Last element deleted.\n");
+            }
+            else
+            {
+                printf("The list is empty.\n");
+            }
+            break;
+        case 3:
+            printf("List elements: ");
+            for (int i = 0; i < size; i++)
+            {
+                printf("%d ", list[i]);
+            }
+            printf("\n");
+            break;
+        case 4:
+            free(list);
+            list = NULL;
+            size = 0;
+            printf("List reset.\n");
+            break;
+        case 5:
+            if (list != NULL)
+            {
+                free(list);
+            }
+            return 0;
+        default:
+            printf("Invalid choice. Please try again.\n");
+        }
     }
-}
-
-// Function to pop an element from the stack and return it
-int pop() {
-    if (top == -1) {
-        printf("Stack Underflow: Cannot pop element from an empty stack.\n");
-        return -1; // Return a sentinel value (e.g., -1) to indicate an error
-    } else {
-        return stack[top--]; // Return the element and decrement top
-    }
-}
-
-// Function to check if the stack is empty
-bool isEmpty() {
-    return (top == -1);
-}
-
-int main() {
-    // Example usage of stack operations
-    push(10);
-    push(20);
-    push(30);
-    
-    printf("Top element: %d\n", stack[top]); // Should print 30
-    
-    printf("Popped element: %d\n", pop()); // Should print 30
-    printf("Popped element: %d\n", pop()); // Should print 20
-    
-    printf("Is the stack empty? %s\n", isEmpty() ? "Yes" : "No"); // Should print "No"
-    
     return 0;
-}
