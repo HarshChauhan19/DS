@@ -8,7 +8,7 @@ void push(int value)
 {
     if (top == MAX_SIZE - 1)
     {
-        printf("Stack overflow. Cannot push more elements.\n");
+        printf("Stack Overflow. Cannot push more elements.\n");
     }
     else
     {
@@ -21,11 +21,11 @@ void pop()
 {
     if (top == -1)
     {
-        printf("Stack is empty. Cannot pop.\n");
+        printf("Stack is Empty. Cannot pop.\n");
     }
     else
     {
-        printf("Popped element: %d\n", stack[top--]);
+        printf("Popped element : %d\n", stack[top--]);
     }
 }
 
@@ -33,11 +33,11 @@ void peep()
 {
     if (top == -1)
     {
-        printf("Stack is empty.\n");
+        printf("Stack is Empty.\n");
     }
     else
     {
-        printf("Top element: %d\n", stack[top]);
+        printf("Top element : %d\n", stack[top]);
     }
 }
 
@@ -45,11 +45,11 @@ void display()
 {
     if (top == -1)
     {
-        printf("Stack is empty.\n");
+        printf("Stack is Empty.\n");
     }
     else
     {
-        printf("Stack elements: ");
+        printf("Stack Elements : ");
         for (int i = 0; i <= top; i++)
         {
             printf("%d ", stack[i]);
@@ -69,12 +69,12 @@ int main()
         printf("3. PEEP\n");
         printf("4. DISPLAY\n");
         printf("5. EXIT\n");
-        printf("Enter your choice: ");
+        printf("Enter your choice : ");
         scanf("%d", &choice);
         switch (choice)
         {
         case 1:
-            printf("Enter element to PUSH: ");
+            printf("Enter element to PUSH : ");
             scanf("%d", &value);
             push(value);
             break;

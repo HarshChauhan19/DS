@@ -25,7 +25,7 @@ void insert()
         else
             rear = rear + 1;
     }
-    printf("Enter an Element : ");
+    printf("Enter an Element to insert : ");
     scanf("%d",&item);
     cqueue[rear] = item;
 }
@@ -109,7 +109,7 @@ int main()
         case 4:
             return 0;
         default:
-            printf("Wrong Choice\n");
+            printf("Invalid choice. Please try again.\n");
         }
     }
     return 0;
