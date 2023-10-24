@@ -86,11 +86,12 @@ int main()
 {
     int choice;
 
-    do
+    while (1)
     {
         printf("\n1. INSERT");
         printf("\n2. DELETE");
-        printf("\n3. DISPLAY\n");
+        printf("\n3. DISPLAY");
+        printf("\n4. EXIT");
         printf("\nEnter your choice:");
         scanf("%d", &choice);
 
@@ -105,10 +106,11 @@ int main()
         case 3:
             display();
             break;
+        case 4:
+            return 0;
         default:
             printf("Wrong Choice\n");
         }
-    } while (choice != 4);
-
+    }
     return 0;
 }
