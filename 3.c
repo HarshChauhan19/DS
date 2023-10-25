@@ -1,3 +1,6 @@
+// Write a menu driven program to store and display 10 student information using structure and user-
+// defined functions.
+ 
 #include <stdio.h>
 #include <string.h>
 

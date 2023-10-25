@@ -1,3 +1,6 @@
+// Write a menu driven program to implement Circular Queue using arrays that performs following
+// operations.1)INSERT 2) DELETE 3) DISPLAY
+
 #include <stdio.h>
 #define size 10
 

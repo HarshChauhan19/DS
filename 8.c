@@ -1,3 +1,6 @@
+// Write a menu driven program to implement following searching methods. 1)Linear Searching
+// 2)Binary Searching
+
 #include <stdio.h>
 
 int linearSearch(int arr[], int size, int key)

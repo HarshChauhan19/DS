@@ -1,3 +1,6 @@
+// Write a menu driven program for Stack that performs following operation using array.1)PUSH 2)
+// POP 3) PEEP 4) DISPLAY
+
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX_SIZE 10

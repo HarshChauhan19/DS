@@ -1,3 +1,6 @@
+// Write a menu driven program to execute following sorting methods on given elements.1)Selection
+// Sort2)Bubble Sort3)Merge Sort4)Quick Sort
+
 #include <stdio.h>
 #include <stdlib.h>
 

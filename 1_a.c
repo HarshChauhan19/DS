@@ -1,3 +1,7 @@
+// Write a menu driven program using array to read 10 elements from the user and perform following
+// operations on array using user defined functions. 1) Addition 2) Average 3) Maximum Value
+// 4) Minimum Value
+
 #include <stdio.h>
 
 void readArray(int arr[], int n)

@@ -1,3 +1,8 @@
+// Write a menu driven program to create a dynamic list using dynamic memory allocation functions
+// (malloc(), calloc(), realloc() and free()). First program should ask the user to input the initial size of
+// the list and then give a menu to add or delete the elements in the list. The program should have
+// following menus.1)Add an element 2) Delete last element 3) Display the list elements 4) Reset
+
 #include <stdio.h>
 #include <stdlib.h>
 

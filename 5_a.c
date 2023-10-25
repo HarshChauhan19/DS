@@ -1,3 +1,6 @@
+// Write a menu driven program to implement Simple Queue using arrays that performs following
+// operations.1)INSERT 2) DELETE 3) DISPLAY 
+
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX_QUEUE_SIZE 10

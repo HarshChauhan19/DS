@@ -1,3 +1,5 @@
+// Write a program using 2D array to multiply two matrices. 
+
 #include <stdio.h>
 
 int main()
