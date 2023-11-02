@@ -7,15 +7,19 @@
 int stack[MAX_SIZE];
 int top = -1;
 
-void push(int value)
+void push()
 {
+    int value;
     if (top == MAX_SIZE - 1)
     {
         printf("Stack Overflow. Cannot push more elements.\n");
     }
     else
     {
-        stack[++top] = value;
+        top++;
+        printf("Enter element to PUSH : ");
+        scanf("%d", &value);
+        stack[top] = value;
         printf("Element %d pushed onto the stack.\n", value);
     }
 }
@@ -28,7 +32,8 @@ void pop()
     }
     else
     {
-        printf("Popped element : %d\n", stack[top--]);
+        printf("Popped element : %d\n", stack[top]);
+        top--;
     }
 }
 
@@ -63,7 +68,7 @@ void display()
 
 int main()
 {
-    int choice, value;
+    int choice;
     while (1)
     {
         printf("\nMenu:\n");
@@ -77,9 +82,7 @@ int main()
         switch (choice)
         {
         case 1:
-            printf("Enter element to PUSH : ");
-            scanf("%d", &value);
-            push(value);
+            push();
             break;
         case 2:
             pop();
